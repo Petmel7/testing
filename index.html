@@ -2,637 +2,809 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet"
-        href=" https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="utf-8" />
+    <title>Casono</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta property="og:locale" content="en" />
+    <link rel="canonical" href="#" />
+    <link rel="shortcut icon" href="img/fa-icon.png" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <script defer src="js/acordeon.js"></script>
+    <script defer src="js/sitebar.js"></script>
+    <script defer src="js/mob-menu.js"></script>
+    <script defer src="js/scroll.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__block">
-            <div class="header__logo">
-                <a href="index.html">LOGO</a>
-            </div>
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="img/logo.svg" alt="" title="" />
+            </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li>
 
-            <nav class="header__nav" aria-label="Main Navigation">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                        <a href="bonus.html" class="header__nav-link">
-                            <span class="icon icon-bonus" data-i18n="Bonuses"></span> <span id="bonuses">Bonuses</span>
-                        </a>
+                        <a href="#">
+                            <img src="img/bonuses.svg" alt="" title="">
+                            Bonuses</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="app.html" class="header__nav-link">
-                            <span class="icon icon-app"></span> <span id="app">App</span>
-                        </a>
+                    <li>
+                        <a href="#">
+                            <img src="img/app.svg" alt="" title="">
+                            APP</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-link"><span id="live">Live</span></a>
+                    <li>
+                        <a href="#">LIVE</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-link"><span id="sports">Sports</span></a>
+                    <li>
+                        <a href="#">SPORTS</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-link"><span id="more">More</span></a>
+                    <li>
+                        <a href="#">MORE</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="header__lang">
-                <label for="lang-select" class="sr-only"></label>
-                <select class="header__lang-select" id="lang-select">
-                    <option value="at" selected>AT</option>
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                    <option value="de">DE</option>
-                </select>
-                <div class="flag-container">
-                    <img id="flag-img" src="images/lg/us.png" alt="Latvia Flag" style="width: 20px; height: 15px;">
-                </div>
-            </div>
+            <div class="header__controls">
+                <div class="header__lang">
+                    <img src="img/flag-at.png" alt="" title="" />
+                    <span>at</span>
+                    <img src="img/lg.svg" alt="" title="" class="lg" />
+                    <ul class="header__lang-menu">
+                        <li>
+                            <a href="#"><img src="img/uz.png" alt="" title="" /> uz</a>
+                        </li>
 
-            <a href="#" class="header__button header__button--signup" id="openSignupForm">
-                <span id="signUp">Sign Up</span>
-            </a>
-            <a href="#" class="header__button header__button--login" id="openLoginForm">
-                <span id="logIn">Log In</span>
-            </a>
-            <a href="#" class="header__button header__button--logout" id="logOutButton" style="display: none">
-                <span id="logOut">Log Out</span>
-            </a>
+                        <li>
+                            <a href="#"><img src="img/ru.png" alt="" title="" /> ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="button">Sign up</a>
+                <a href="#" class="button header-controls__button--register">log in</a>
+
+            </div>
+            <div class="header__burger" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
-        <button class="burger" id="burgerMenu" aria-label="Open menu">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-        </button>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu__list">
+                <li>
+
+                    <a href="#">
+                        <img src="img/bonuses.svg" alt="" title="">
+                        Bonuses</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/app.svg" alt="" title="">
+                        APP</a>
+                </li>
+                <li>
+                    <a href="#">LIVE</a>
+                </li>
+                <li>
+                    <a href="#">SPORTS</a>
+                </li>
+                <li>
+                    <a href="#">MORE</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- <div id="modalNav" class="modal-nav">
-        <div class="modal-nav-content">
-            <span class="close-modal" id="closeModalNav">&times;</span>
-            <ul class="modal-nav-list">
-                <li><a href="bonus.html">Bonuses</a></li>
-                <li><a href="app.html">App</a></li>
-                <li><a href="#">Live</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </div>
-    </div> -->
 
-    <!-- <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeSignupForm">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <label for="signupUsername">Username:</label>
-                <input type="text" id="signupUsername" name="username" required />
-                <label for="signupPassword">Password:</label>
-                <input type="password" id="signupPassword" name="password" required />
-                <button type="submit" class="submit">Sign Up</button>
-            </form>
-        </div>
-    </div> -->
-
-    <!-- <div id="loginModal" class="modal">
-        <div class="modal-content modal-content-in">
-            <span class="close" id="closeLoginForm">&times;</span>
-            <h2>Log In</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="username" required />
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="password" required />
-                <button type="submit" class="submit">Log In</button>
-            </form>
-        </div>
-    </div> -->
-
-    <main class="container">
-        <div class="hero-block">
-            <div>
-                <section class="promo">
-                    <div>
-                        <div class="promo__content">
-                            <p class="promo__text" id="promoText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus,
-                                in dapibus imperdiet quis eget.
-                                Curabitur semper volutpat cras elementum.
-                            </p>
-                            <a href="#" class="promo__button">
-                                <span class="promo__icon promo__icon--app"></span>
-                                <span class="promo__icon promo__icon--arrow"></span>
-                                <span id="mobileApp">Mobile App</span>
-                            </a>
+    <main class="main">
+        <section class="content-main">
+            <section class="content mobile-app">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum.</p>
+                <div>
+                    <a href="#">
+                        <img src="img/apple.svg" alt="" title="">
+                        <img src="img/android.svg" alt="" title="">
+                        Mobile app
+                    </a>
+                </div>
+            </section>
+            <section class="hero">
+                <div class="hero__wrap">
+                    <div class="hero-content__rating" itemscope="" itemtype="http://schema.org/Game">
+                        <meta itemprop="name" content="https://bet-label.si/" />
+                        <span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                            <span itemprop="ratingValue">96</span>
+                            <span>/</span>
+                            <span itemprop="bestRating">100</span>
+                            <meta itemprop="reviewCount" content="100" />
+                        </span>
+                        <div class="hero-content__rating-star">
+                            <img src="img/star.svg" alt="" title="">
+                            <img src="img/star.svg" alt="" title="">
+                            <img src="img/star.svg" alt="" title="">
+                            <img src="img/star.svg" alt="" title="">
+                            <img src="img/star.svg" alt="" title="">
                         </div>
                     </div>
-                </section>
-                <section class="banner-hero">
-                    <div class="banner__rating" id="bannerRating">96/100 ★★★★★</div>
-                    <h1 class="banner__title" id="bannerTitle">
-                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing
+                    <h1 class="title general hero__title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
                     </h1>
-                    <button type="submit" class="banner__button" id="openSignupFromHero">
-                        <span id="signUpHero">Sign Up</span>
-                    </button>
-                </section>
 
-                <div id="signupModalHero" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="closeSignupFormHero">&times;</span>
-                        <h2>Sign Up</h2>
-                        <form id="signupFormHero">
-                            <label for="signupUsernameHero">Username:</label>
-                            <input type="text" id="signupUsernameHero" name="username" required />
-                            <label for="signupPasswordHero">Password:</label>
-                            <input type="password" id="signupPasswordHero" name="password" required />
-                            <button type="submit" class="submit">Sign Up</button>
-                        </form>
+                    <a href="#" class="button hero__button">Sign up</a>
+                    <p>18+ T&C apply | Play Responsibly</p>
+                </div>
+                <div class="background hero__background">
+                    <img src="img/hero-home.png" alt="" title="" />
+                </div>
+            </section>
+            <section class="content bonus">
+                <ul class="bonus__list">
+                    <li>
+                        <img src="img/bonus1.svg" alt="" title="">
+                        <div>PLAY REWIEW</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus2.svg" alt="" title="">
+                        <div>CASINO BONUSES</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus3.svg" alt="" title="">
+                        <div>CASINO BONUSES</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus4.svg" alt="" title="">
+                        <div>CASINO APP</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus5.svg" alt="" title="">
+                        <div>CASINO MOBILE</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus6.svg" alt="" title="">
+                        <div>HOW TO SIGN UP</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus7.svg" alt="" title="">
+                        <div>CASINO REVIEW</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus8.svg" alt="" title="">
+                        <div>PLAYER
+                            REVIEWS (4)</div>
+                    </li>
+                    <li>
+                        <img src="img/bonus9.svg" alt="" title="">
+                        <div>COMPLAINTS</div>
+                    </li>
+                </ul>
+            </section>
+            <section class="content bonus__content">
+                <div class="bonus__wrap">
+                    <h3 class="title bonus__title">100% BONUS UP TO 300€</h3>
+                    <p>+100 free spins on your first deposit</p>
+                    <a href="#" class="button bonus__button">Get a bonus now</a>
+                </div>
+                <div class="background bonus__background">
+                    <img src="img/home1.png" alt="" title="" />
+                </div>
+            </section>
+            <section class="content ">
+                <h2>100% up to 300€</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+            </section>
+            <section class="content rating__content">
+                <div class="rating__wrap">
+                    <table class="rating__table">
+                        <tbody>
+                            <tr>
+                                <td>Bonus offer</td>
+                                <td>
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                </td>
+                                <td>
+                                    <span>9</span>
+                                    /10
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BETTING VARIETY</td>
+                                <td>
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                </td>
+                                <td>
+                                    <span>8</span>
+                                    /10
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>mobile experience</td>
+                                <td>
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                    <img src="img/rating1.svg" alt="" title="">
+                                </td>
+                                <td>
+                                    <span>7</span>
+                                    /10
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>payment options</td>
+                                <td>
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                    <img src="img/rating.svg" alt="" title="">
+                                </td>
+                                <td>
+                                    <span>9</span>
+                                    /10
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="content facts">
+                <h2 class="title high facts__title">
+                    quick facts
+                </h2>
+                <div class="facts__tables">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/table1.png" alt="" title="" />
+                                    Website
+                                </td>
+                                <td>
+
+                                    casinoname.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table2.png" alt="" title="" />
+                                    Game Types:
+                                </td>
+                                <td>
+
+                                    Sportsbook, Casino, Live Games, Live Casino
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table3.png" alt="" title="" />
+                                    Deposit methods:
+                                </td>
+                                <td>
+
+                                    Visa, Masterscard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank
+                                    Transfer, Entropay, ecoPayz, Neosurf
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table4.png" alt="" title="" />
+                                    Withdrawal methods:
+                                </td>
+                                <td>
+
+                                    Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank
+                                    Transfer, Entropay, ecoPayz, Neosurf
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table4.png" alt="" title="" />
+                                    Betting functions:
+                                </td>
+                                <td>
+
+                                    Live betting, cash out
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table5.png" alt="" title="" />
+                                    Casino game types:
+                                </td>
+                                <td>
+
+                                    Slots, table games
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table6.png" alt="" title="" />
+                                    Casino provider:
+                                </td>
+                                <td>
+
+                                    1X2 Network, Amatic Industries, Apollo Games, Asia Gaming and more
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table7.png" alt="" title="" />
+                                    Apps:
+                                </td>
+                                <td>
+
+                                    iPhone, Android
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/table8.png" alt="" title="" />
+                                    Founded Year:
+                                </td>
+                                <td>
+
+                                    2017
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="content article">
+                <h2>SPORTSBOOK REVIEW
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <h3>LINEUP OF THE SPORTS
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <h3>BETTING TYPES
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <h3>LIVE BETTING
+                </h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in
+                        dapibus imperdiet quis eget.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus.</li>
+                </ul>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in
+                        dapibus imperdiet quis eget.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus.</li>
+                </ol>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <a href="#" class="button">Sign up</a>
+            </section>
+            <section class="content slider">
+                <div class="slider__title">
+                    <h3>what other players have to say</h3>
+                    <div class="slider__arrow">
+                        <div><img src="img/left.svg" alt="" title=""></div>
+                        <div><img src="img/right.svg" alt="" title=""></div>
                     </div>
                 </div>
-                <section class="section">
-                    <div class="section__item">
-                        <img src="images/nav/money.png" alt="Play Review" title="" class="section__icon" />
-                        <span id="playReview" class="section__label">Play Review</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/crown.png" alt="Casino Bonuses" title="" class="section__icon" />
-                        <span id="casinoBonuses1" class="section__label">Casino Bonuses</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/group.png" alt="Casino Bonuses" title="" class="section__icon" />
-                        <span id="casinoBonuses2" class="section__label">Casino Bonuses</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/casino.png" alt="Casino App" title="" class="section__icon" />
-                        <span id="casinoApp" class="section__label">Casino App</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/device.png" alt="CASINO MOBILE" title="" class="section__icon" />
-                        <span id="casinoMobile" class="section__label">CASINO MOBILE</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/gr.png" alt="HOW TO SIGN UP" title="" class="section__icon" />
-                        <span id="howToSignUp" class="section__label">HOW TO SIGN UP</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/croupier.png" alt="CASINO REVIEW" title="" class="section__icon" />
-                        <span id="casinoReview" class="section__label">CASINO REVIEW</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/card.png" alt="PLAYER REVIEWS" title="" class="section__icon" />
-                        <span id="playerReviews" class="section__label">PLAYER REVIEWS (4)</span>
-                    </div>
-                    <div class="section__item">
-                        <img src="images/nav/gru.png" alt="Complaints" title="" class="section__icon" />
-                        <span id="complaints" class="section__label">Complaints</span>
-                    </div>
-                </section>
-
-                <section class="bonus-section">
-                    <div class="bonus-section__content">
-                        <h2 id="bonusTitle" class="bonus-section__title">100% BONUS UP TO 300€</h2>
-                        <p id="bonusSubtitle" class="bonus-section__subtitle">+100 free spins on your first deposit</p>
-                        <a href="#" id="bonusButton" class="bonus-section__button">Get a bonus now</a>
-                    </div>
-                </section>
-
-                <section class="text-block-section">
-                    <h2 id="textBlockTitle" class="text-block-section__title">100% UP TO 300€</h2>
-                    <p id="textBlockDescription" class="text-block-section__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas
-                        eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras
-                        elementum. Eget ultrices donec urna tellus duis ullamcorper consequat.
-                    </p>
-                </section>
-
-                <section class="rating-section">
-                    <div class="rating-item">
-                        <div id="ratingBonusOffer" class="rating-item__label">Bonus Offer</div>
-                        <div class="rating-item__stars">
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__score">9/10</span>
-                        </div>
-                    </div>
-
-                    <div class="rating-item">
-                        <div id="ratingBettingVariety" class="rating-item__label">Betting Variety</div>
-                        <div class="rating-item__stars">
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__score">8/10</span>
-                        </div>
-                    </div>
-
-                    <div class="rating-item">
-                        <div id="ratingMobileExperience" class="rating-item__label">Mobile Experience</div>
-                        <div class="rating-item__stars">
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__score">7/10</span>
-                        </div>
-                    </div>
-
-                    <div class="rating-item">
-                        <div id="ratingPaymentOptions" class="rating-item__label">Payment Options</div>
-                        <div class="rating-item__stars">
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star rating-item__star--active"></span>
-                            <span class="rating-item__star"></span>
-                            <span class="rating-item__score">9/10</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="quick-facts">
-                    <h2 id="quickFactsTitle" class="quick-facts__title">QUICK FACTS</h2>
-                    <ul class="quick-facts__list">
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">🌐</span>
-                            <span id="quickFactsWebsiteLabel" class="quick-facts__label">Website</span>
-                            <span class="quick-facts__value">
-                                <a href="https://casinoname.com/">casinoname.com</a>
-                            </span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">🎮</span>
-                            <span id="quickFactsGameTypesLabel" class="quick-facts__label">Game Types</span>
-                            <span id="quickFactsGameTypesValue" class="quick-facts__value">Sportsbook, Casino, Live
-                                Games, Live
-                                Casino</span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">💳</span>
-                            <span id="quickFactsDepositMethodsLabel" class="quick-facts__label">Deposit Methods</span>
-                            <span id="quickFactsDepositMethodsValue" class="quick-facts__value">
-                                Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin,
-                                Bank Transfer, Entropay, ecoPayz, Neosurf
-                            </span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">🏦</span>
-                            <span id="quickFactsWithdrawalMethodsLabel" class="quick-facts__label">Withdrawal
-                                Methods</span>
-                            <span id="quickFactsWithdrawalMethodsValue" class="quick-facts__value">
-                                Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin,
-                                Bank Transfer, Entropay, ecoPayz, Neosurf
-                            </span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">⚽</span>
-                            <span id="quickFactsBettingFunctionsLabel" class="quick-facts__label">Betting
-                                Functions</span>
-                            <span id="quickFactsBettingFunctionsValue" class="quick-facts__value">Live betting, cash
-                                out</span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">🎰</span>
-                            <span id="quickFactsCasinoGameTypesLabel" class="quick-facts__label">Casino Game
-                                Types</span>
-                            <span id="quickFactsCasinoGameTypesValue" class="quick-facts__value">Slots, table
-                                games</span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">🏢</span>
-                            <span id="quickFactsCasinoProviderLabel" class="quick-facts__label">Casino Provider</span>
-                            <span id="quickFactsCasinoProviderValue" class="quick-facts__value">
-                                1X2 Network, Amatic Industries, Apollo Games, Asia Gaming and more
-                            </span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">📱</span>
-                            <span id="quickFactsAppsLabel" class="quick-facts__label">Apps</span>
-                            <span id="quickFactsAppsValue" class="quick-facts__value">iPhone, Android</span>
-                        </li>
-                        <li class="quick-facts__item">
-                            <span class="quick-facts__list-icon">📅</span>
-                            <span id="quickFactsFoundedYearLabel" class="quick-facts__label">Founded Year</span>
-                            <span id="quickFactsFoundedYearValue" class="quick-facts__value">2017</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="sportsbook">
-                    <h2 id="sportsbookTitle" class="sportsbook__title">SPORTSBOOK REVIEW</h2>
-                    <p id="sportsbookDescription1" class="sportsbook__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas
-                        eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras
-                        elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim
-                        nunc neque tristique adipiscing varius sit tristique. Sit parturient eget
-                        pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in
-                        mollis faucibus ut. Magna in neque tristi.
-                    </p>
-
-                    <h3 id="sportsbookSubtitle1" class="sportsbook__subtitle">LINEUP OF THE SPORTS</h3>
-                    <p id="sportsbookDescription2" class="sportsbook__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas
-                        eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras
-                        elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim
-                        nunc neque tristique adipiscing varius sit tristique. Sit parturient eget
-                        pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in
-                        mollis faucibus ut. Magna in neque tristi.
-                    </p>
-
-                    <h3 id="sportsbookSubtitle2" class="sportsbook__subtitle">BETTING TYPES</h3>
-                    <p id="sportsbookDescription3" class="sportsbook__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas
-                        eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras
-                        elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim
-                        nunc neque tristique adipiscing varius sit tristique. Sit parturient eget
-                        pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in
-                        mollis faucibus ut. Magna in neque tristi.
-                    </p>
-
-                    <h3 id="sportsbookSubtitle3" class="sportsbook__subtitle">LIVE BETTING</h3>
-                    <ul class="sportsbook__list">
-                        <li id="sportsbookListItem1" class="sportsbook__list-item">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </li>
-                        <li id="sportsbookListItem2" class="sportsbook__list-item">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </li>
-                        <li id="sportsbookListItem3" class="sportsbook__list-item">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </li>
-                        <li id="sportsbookListItem4" class="sportsbook__list-item">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            <ol class="sportsbook__list-itemnum">
-                                <li id="sportsbookListSubItem1" class="sportsbook__list-item">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-                                    egestas eget purus, in dapibus imperdiet quis eget.
-                                </li>
-                                <li id="sportsbookListSubItem2" class="sportsbook__list-item">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </li>
-                                <li id="sportsbookListSubItem3" class="sportsbook__list-item">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-                                    egestas eget purus.
-                                </li>
-                            </ol>
-                        </li>
-                    </ul>
-
-                    <p id="sportsbookDescription4" class="sportsbook__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas
-                        eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras
-                        elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim
-                        nunc neque tristique adipiscing varius sit tristique. Sit parturient eget
-                        pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in
-                        mollis faucibus ut. Magna in neque tristi.
-                    </p>
-                    <button id="sportsbookCTA" class="sportsbook__cta">SIGN UP</button>
-                </section>
-
-                <section class="player-reviews">
-                    <h2 class="player-reviews__title">What Other Players Have to Say</h2>
-                    <button class="player-reviews__prev">❮</button>
-                    <button class="player-reviews__next">❯</button>
-                    <div class="player-reviews__slider">
-                        <div class="player-reviews__items">
-                            <article class="player-reviews__item">
-                                <div class="player-reviews__item-content">
-                                    <img class="player-reviews__item-image" src="images/players/jos.png" alt="Joshua"
-                                        title="" />
-                                    <div class="player-reviews__item-details">
-                                        <div class="player-reviews__item-header">
-                                            <p class="player-reviews__name">Joshua</p>
-                                            <span class="player-reviews__rating">
-                                                <span class="star"><span class="rating">4.5</span></span>
-                                            </span>
-                                        </div>
-                                        <p class="player-reviews__description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </p>
-                                    </div>
+                <div class="slider__content">
+                    <div class="slider__block">
+                        <div class="slider__img"><img src="img/people1.png" alt="" title=""></div>
+                        <div class="slider__info">
+                            <div class="slider__name">
+                                <div>
+                                    <h3>joshua</h3>
+                                    <img src="img/player.svg" alt="" title="">
+                                    <span>4.5</span>
                                 </div>
-                            </article>
-                            <article class="player-reviews__item">
-                                <div class="player-reviews__item-content">
-                                    <img class="player-reviews__item-image" src="images/players/mark.png" alt="Mark"
-                                        title="" />
-                                    <div class="player-reviews__item-details">
-                                        <div class="player-reviews__item-header">
-                                            <p class="player-reviews__name">Mark</p>
-                                            <span class="player-reviews__rating">
-                                                <span class="star"><span class="rating">4.5</span></span>
-                                            </span>
-                                        </div>
-                                        <p class="player-reviews__description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="player-reviews__item">
-                                <div class="player-reviews__item-content">
-                                    <img class="player-reviews__item-image" src="images/players/jos.png" alt="Joshua"
-                                        title="" />
-                                    <div class="player-reviews__item-details">
-                                        <div class="player-reviews__item-header">
-                                            <p class="player-reviews__name">Joshua</p>
-                                            <span class="player-reviews__rating">
-                                                <span class="star"><span class="rating">4.5</span></span>
-                                            </span>
-                                        </div>
-                                        <p class="player-reviews__description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="player-reviews__item">
-                                <div class="player-reviews__item-content">
-                                    <img class="player-reviews__item-image" src="images/players/mark.png" alt="Mark"
-                                        title="" />
-                                    <div class="player-reviews__item-details">
-                                        <div class="player-reviews__item-header">
-                                            <p class="player-reviews__name">Mark</p>
-                                            <span class="player-reviews__rating">
-                                                <span class="star"><span class="rating">4.5</span></span>
-                                            </span>
-                                        </div>
-                                        <p class="player-reviews__description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                         </div>
-                    </div>
-                </section>
 
-                <section class="customer-support">
-                    <h2 class="customer-support__title">Customer Support</h2>
-                    <p class="customer-support__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore esse,
-                        delectus praesentium facilis perspiciatis iste id eos! Provident maiores
-                        totam quod maxime vero id sequi doloribus, consequuntur magni suscipit.
-                    </p>
-                    <div class="customer-support__contact-options">
-                        <div class="customer-support__option">
-                            <span class="customer-support__icon" aria-label="Chat Icon">💬</span>
-                            <span class="customer-support__text">Chat</span>
-                        </div>
-                        <div class="customer-support__option">
-                            <span class="customer-support__icon" aria-label="Phone Icon">📞</span>
-                            <span class="customer-support__text">Phone</span>
-                        </div>
-                        <div class="customer-support__option">
-                            <span class="customer-support__icon" aria-label="Email Icon">✉️</span>
-                            <span class="customer-support__text">Email</span>
-                        </div>
                     </div>
-                    <div class="customer-support__info">
-                        <div class="customer-support__info-item">
-                            <div class="customer-support__info-label">
-                                <i class="fas fa-envelope support__detail-icon"></i> Email Technical
-                                Support:
+                    <div class="slider__block">
+                        <div class="slider__img"><img src="img/people2.png" alt="" title=""></div>
+                        <div class="slider__info">
+                            <div class="slider__name">
+                                <div>
+                                    <h3>mark</h3>
+                                    <img src="img/player.svg" alt="" title="">
+                                    <span>4.5</span>
+                                </div>
                             </div>
-                            <div class="customer-support__info-value">
-                                <a href="mailto:support@gmail.com" class="email">support@gmail.com</a>
-                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                         </div>
-                        <div class="customer-support__info-item">
-                            <div class="customer-support__info-label">
-                                <i class="fas fa-envelope support__detail-icon"></i> Online Partnership
-                                Queries:
-                            </div>
-                            <div class="customer-support__info-value">
-                                <a href="mailto:partnerships@gmail.com" class="email">partnerships@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="customer-support__info-item">
-                            <div class="customer-support__info-label">
-                                <i class="fas fa-comments support__detail-icon"></i> Live Chat:
-                            </div>
-                            <div class="customer-support__info-value">Available</div>
-                        </div>
-                        <div class="customer-support__info-item">
-                            <div class="customer-support__info-label">
-                                <i class="fas fa-map-marker-alt support__detail-icon"></i> Address:
-                            </div>
-                            <div class="customer-support__info-value">
-                                Broadway, 12, Lyric Building, Block 1, 1st Floor, Post Office 151,
-                                20200, Oslo, Norway
-                            </div>
-                        </div>
-                        <div class="customer-support__info-item">
-                            <a href="#" class="customer-support__info-map">
-                                <i class="fas fa-map-marker-alt support__detail-icon"></i>
+
+                    </div>
+                </div>
+            </section>
+            <section class="content support">
+                <h2>Customer Support</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <ul class="support__list">
+                    <li><img src="img/support1.svg" alt="" title="">chat</li>
+                    <li><img src="img/support2.svg" alt="" title="">phone</li>
+                    <li><img src="img/support3.svg" alt="" title="">Email</li>
+                </ul>
+                <table class="support__table">
+                    <tbody>
+                        <tr>
+                            <td><img src="img/support__table1.svg" alt="" title="" />
+                                Email Technical Support
+                            </td>
+                            <td>
+
+                                example@mail.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/support__table2.svg" alt="" title="" />
+                                Online Partnership Queries
+                            </td>
+                            <td>
+
+                                examplesupport@mail.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/support__table3.svg" alt="" title="" />
+                                Live chat
+                            </td>
+                            <td>
+
+                                Available
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/support__table4.svg" alt="" title="" />
+                                Address
+                            </td>
+                            <td>
+
+                                Broadway, 12, Lyric building, block 1, 1st floor, Flat/Office 15, 29000, Oslo, Norway
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/support__table5.svg" alt="" title="" />
                                 Google Maps
-                            </a>
-                        </div>
-                    </div>
-                </section>
+                            </td>
+                            <td>
 
-                <section class="faq">
-                    <h2 class="faq__title">FAQ</h2>
-                    <div class="faq__item">
-                        <div class="faq__question">Question?</div>
-                        <div class="faq__answer">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-                            vero! Iure est ducimus earum exercitationem aperiam dignissimos
-                            perferendis? Minima maiores ut beatae, aliquid iusto odit repellat ea
-                            voluptatem dicta recusandae!
-                        </div>
+                                Click here
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </section>
+            <section class="content faq__content">
+                <h2 class="title high faq">Faq</h2>
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(1)">
+                        Question
+                        <img src="img/faq1.svg" class="faq__icon" id="img1" alt="" title="" />
                     </div>
-                    <div class="faq__item">
-                        <div class="faq__question">Question?</div>
-                        <div class="faq__answer">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem mollitia
-                            distinctio veritatis, minima labore repellat assumenda facilis incidunt
-                            repellendus omnis debitis in explicabo corrupti nostrum odio dolor quis
-                            ducimus sunt!
-                        </div>
+                    <div class="faq__answer" id="answer1">
+                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin, lorem quis
+                        bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
+                        amet nibh vulputate cursus
+                        a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
+                        odio. Sed non mauris
+                        vitae erat consequat auctor eu in elit.
                     </div>
-                    <div class="faq__item">
-                        <div class="faq__question">Question?</div>
-                        <div class="faq__answer">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-                            deleniti distinctio iusto hic? Iusto porro earum molestias, eaque aperiam
-                            architecto ex accusamus velit numquam, doloremque perferendis cumque.
-                            Delectus, inventore cupiditate.
-                        </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(1)">
+                        Question
+                        <img src="img/faq1.svg" class="faq__icon" id="img1" alt="" title="" />
                     </div>
-                </section>
+                    <div class="faq__answer" id="answer1">
+                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin,
+                        lorem quis
+                        bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
+                        amet nibh vulputate
+                        cursus
+                        a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
+                        odio. Sed non
+                        mauris
+                        vitae erat consequat auctor eu in elit.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question" onclick="toggleFAQ(1)">
+                        Question
+                        <img src="img/faq1.svg" class="faq__icon" id="img1" alt="" title="" />
+                    </div>
+                    <div class="faq__answer" id="answer1">
+                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin,
+                        lorem quis
+                        bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
+                        amet nibh vulputate
+                        cursus
+                        a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
+                        odio. Sed non
+                        mauris
+                        vitae erat consequat auctor eu in elit.
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <aside>
+            <nav class="sitebar__item sitebar__events">
+                <div class="sitebar__events-heading">
+                    <a href="#" class="sitebar__events-link">
+                        <span>live events:</span>
+                        <span>143</span>
+                    </a>
+                </div>
+                <ul class="sitebar__events-list">
+                    <li>
+                        <a href="#">
+                            <img src="img/aside1.svg" alt="" title="" />
+                            <span>American football</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="img/aside2.svg" alt="" title="" />
+                            <span>Buscetball</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="img/aside3.svg" alt="" title="" />
+                            <span>Tennis</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="img/aside4.svg" alt="" title="" />
+                            <span>Bascetball</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="img/aside5.svg" alt="" title="" />
+                            <span>Bowling</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside6.svg" alt="" title="" />
+                            <span>Box</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside6.svg" alt="" title="" />
+                            <span>Box</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside7.svg" alt="" title="" />
+                            <span>Football</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside8.svg" alt="" title="" />
+                            <span>Golf</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside9.svg" alt="" title="" />
+                            <span>Golf Club</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside10.svg" alt="" title="" />
+                            <span>Skateboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside11.svg" alt="" title="" />
+                            <span>Table tennis</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside12.svg" alt="" title="" />
+                            <span>Tennis racket</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/aside13.svg" alt="" title="" />
+                            <span>Volleyball</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="aside__casino">
+                <div class="aside__casino-title">casino</div>
+                <ul>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game1.jpg" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game2.png" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game3.png" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game4.png" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game5.png" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="casino-item">
+                        <a href="#">
+                            <img src="img/sitebar-game6.png" alt="" title="">
+                            <div class="tooltip">
+                                <h3>WELL OIL</h3>
+                                <a href="#">Login</a>
+                                <span>or</span>
+                                <a href="#" class="button">Sign up</a>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </aside>
     </main>
-    <footer class="container">
-        <div class="footer">
-            <div class="footer__content">
-                <div class="footer__description">
-                    <div class="footer__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget
-                        est a purus dignissim aliquet eget eu sapien. Donec auctor vehicula
-                        lorem, eu suscipit est luctus sit amet.
-                    </div>
-
-                    <div class="footer__note">
-                        Gambling can be addictive. Play responsibly.
-                    </div>
-                </div>
-
-                <div class="footer__age-restriction">
-                    <span class="footer__age-restriction-icon">18+</span>
-                </div>
+    <footer class="footer-main">
+        <section class="content footer">
+            <div class="footer__info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus
+                    imperdiet quis eget.
+                    Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper
+                    consequat. Enim nunc neque
+                    tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio
+                    lorem sapien
+                    congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
+                <img src="img/age.svg" alt="" title="">
+            </div>
+            <p>Gambling can be addictive. Play responsibly.</p>
+            <div class="footer__logo">
+                <a href="#"><img src="img/logo.svg" alt="" title=""></a>
+                <a href="#"><img src="img/logo.svg" alt="" title=""></a>
             </div>
 
-            <div class="footer__logos">
-                <div class="footer__logo">
-                    <a href="/">
-                        <img src="images/logo.png" alt="Logo" title="" class="footer__logo-image" />
-                    </a>
-                </div>
-                <div class="footer__logo">
-                    <a href="/">
-                        <img src="images/logo.png" alt="Logo" title="" class="footer__logo-image" />
-                    </a>
-                </div>
-            </div>
-        </div>
+        </section>
+
     </footer>
     <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
     <script type="module" src="./main.js" defer></script>
