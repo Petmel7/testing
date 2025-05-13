@@ -549,7 +549,7 @@ h3,
 
 .sitebar__events,
 .sitebar__menu {
-    border-radius: 0 0 6px 6px;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -972,9 +972,10 @@ aside {
     gap: 8px;
 }
 
-/* bonus__list */
+
 .bonus__list {
     display: flex;
+    justify-content: center;
 }
 
 .bonus__list li {
@@ -1018,6 +1019,18 @@ aside {
 
 .bonus__list li:hover::after {
     opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .bonus__list li {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 450px) {
+    .bonus__list li {
+        flex: 0 1 100%;
+    }
 }
 
 /* bonus__content */
@@ -1129,11 +1142,37 @@ aside {
     margin-left: 16px;
 }
 
+@media (max-width: 700px) {
+    .rating__table tbody tr {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px;
+    }
+
+    .rating__table tr td:nth-child(1) {
+        width: auto;
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+    .rating__table tr td:nth-child(2) {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+
+    .rating__table tr td:nth-child(3) {
+        margin-left: 0;
+        font-size: 13px;
+    }
+}
+
 /* table */
 .facts__tables table {
     width: 100%;
     table-layout: fixed;
-
     border-collapse: collapse;
 }
 
@@ -1144,11 +1183,11 @@ aside {
 }
 
 .facts__tables table tbody tr td {
-    display: flex;
-    gap: 8px;
+    padding: 8px;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
+    vertical-align: top;
 }
 
 .facts__tables table tbody tr td img {
@@ -1156,19 +1195,31 @@ aside {
     height: 28px;
 }
 
+.facts__tables table tbody tr td:first-child img {
+    width: 24px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 .facts__tables table tbody tr td:first-child {
     width: 319px;
-    font-size: 16px;
     font-weight: 500;
-    line-height: 150%;
 }
 
 .facts__tables table tbody tr {
-    display: flex;
     border-bottom: 1px solid #77777780;
-    min-height: 44px;
-    padding: 8px 36px;
-    gap: 32px;
+}
+
+.facts__tables-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.facts__tables-block img {
+    width: 24px;
+    height: 28px;
 }
 
 /* slider */
@@ -1209,8 +1260,9 @@ aside {
 }
 
 .slider__block .slider__img img {
-    width: 109px;
-    height: 113px;
+    max-width: 109px;
+    height: auto;
+    display: block;
 }
 
 .slider__name h3 {
@@ -1237,7 +1289,37 @@ aside {
     line-height: 150%;
 }
 
-/* upport" */
+@media (max-width: 358px) {
+    .slider__content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .slider__block {
+        flex-direction: column;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .slider__block .slider__img img {
+        max-width: 80px;
+    }
+
+    .slider__name div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .slider__name h3 {
+        margin-right: 8px;
+    }
+
+    .slider__info p {
+        font-size: 14px;
+    }
+}
+
+/* support" */
 .support__list {
     display: flex;
     gap: 16px;
@@ -1258,11 +1340,6 @@ aside {
 
 .support__table tbody tr {
     border-bottom: 1px solid #77777780;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 44px;
-    padding: 10px 0;
 }
 
 .support__table tbody tr:first-child td:last-child,
@@ -1280,9 +1357,6 @@ aside {
 
 .support__table tbody tr td:first-child {
     width: 319px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
 }
 
 .support__table tbody tr td:last-child {
@@ -1291,10 +1365,41 @@ aside {
     line-height: 150%;
 }
 
+.support__table tbody tr td img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+}
+
+.support__table tbody tr td span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .support__table tbody tr td {
+    padding: 10px 0;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.support__table-block {
     display: flex;
-    gap: 16px;
     align-items: center;
+    gap: 12px;
+}
+
+.support__table-block img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.support__table-block span {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* faq */
@@ -1349,6 +1454,8 @@ aside {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 /* breadcrumbs */
 .breadcrumbs {
